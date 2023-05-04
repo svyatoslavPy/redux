@@ -4,11 +4,11 @@ export const CardEpisode = props => {
 	const dispatch = useDispatch()
 	// console.log(selectedCharacter);
 
-	const characterEpisodeHandler = id => {
-		dispatch(fetchEpisodeSelected(`character/${id}`))
+	const episodeSelectedHandler = id => {
+		dispatch(fetchEpisodeSelected(`episode/${id}`))
 	}
 	return (
-		<div className='card' onClick={() => characterEpisodeHandler(props.id)}>
+		<div className='card' onClick={() => episodeSelectedHandler(props.id)}>
 			<p>{props.id}</p>
 			<p>{props.name}</p>
 			<p>{props.status}</p>
