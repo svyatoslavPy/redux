@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Loader } from './preloader'
-import { Card } from './Card'
+import { CardCharacter } from './Card-Character'
 import { fetchChar } from '../store/slices/Character'
 // import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
@@ -45,7 +45,7 @@ export const СardCharacter = () => {
 					) : (
 						characterData.character.results
 							.slice(0, 12)
-							.map(i => <Card id={i.id} name={i.name} status={i.status}></Card>)
+							.map(i => <CardCharacter id={i.id} name={i.name} status={i.status}></CardCharacter>)
 					)}
 				</div>
 				{!characterLoading && (

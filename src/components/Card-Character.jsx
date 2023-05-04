@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux'
 import { fetchCharSelected } from '../store/slices/Character'
-export const Card = props => {
+
+export const CardCharacter = props => {
 	const dispatch = useDispatch()
 
 	const characterSelectedHandler = id => {
